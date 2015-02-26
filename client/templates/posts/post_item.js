@@ -6,5 +6,8 @@ Template.postItem.helpers({
     var a = document.createElement('a');
     a.href = this.url;
     return a.hostname;
+  },
+  commentsCount: function() {
+  	return Comments.find({postID: this._id}).count();
   }
 });
