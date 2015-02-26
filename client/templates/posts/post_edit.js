@@ -12,7 +12,11 @@ Template.postEdit.events({
     Posts.update(currentPostId, {$set: postProperties}, function(error) {
       if (error) {
         // display the error to the user
+<<<<<<< HEAD
         Error.throw(error.reason);
+=======
+        alert(error.reason);
+>>>>>>> parent of 9e7824e... Including Error notifications
       } else {
         Router.go('postPage', {_id: currentPostId});
       }
