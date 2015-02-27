@@ -1,6 +1,6 @@
 Template.postSubmit.created = function() {
   Session.set('postSubmitErrors', {});
-}
+};
 Template.postSubmit.helpers({
   errorMessage: function(field) {
     return Session.get('postSubmitErrors')[field];
