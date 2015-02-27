@@ -5,19 +5,18 @@ Template.postsList.rendered = function () {
         .hide()
         .insertBefore(next)
         .fadeIn();
-
-    moveElement: function (node, next) {
+    },
+    moveElement: function(node, next) {
       var $node = $(node), $next = $(next);
       var oldTop = $node.offset().top;
       var height = $node.outerHeight(true);
-
+    },
       removeElement: function(node) {
       $(node).fadeOut(function() {
         $(this).remove();
       });
     }
-
-      // find all the elements between next and node
+    // find all the elements between next and node
       var $inBetween = $next.nextUntil(node);
       if ($inBetween.length === 0)
         $inBetween = $node.nextUntil(next);
