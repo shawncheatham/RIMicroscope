@@ -12,4 +12,4 @@ Template.layout.rendered = function() {
       });
     }
   }
-}
+};
